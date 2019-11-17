@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Black.NoTitleBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--seems like anim not working-->
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_top</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+</resources>

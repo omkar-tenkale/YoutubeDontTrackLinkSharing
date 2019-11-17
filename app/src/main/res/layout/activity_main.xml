@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
+    android:id="@+id/rootlayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#00FF6969"
+    android:gravity="bottom"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<View
+    android:layout_width="match_parent"
+    android:background="#FF3F3F"
+    android:layout_height="5dp"/>
+<FrameLayout
+    android:paddingTop="10dp"
+android:clickable="true"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:text="Share from yt" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/success_display"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dip">
+        <LinearLayout android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1" android:orientation="vertical"
+            android:layout_width="match_parent" android:layout_gravity="center|top">
+            <TextView android:id="@+id/video_title" tools:text="Unshortened Link"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textSize="17dp" />
+            <TextView android:id="@+id/video_link" tools:text="https://www.youtube.com/watch?v=fPTGEEXoUqs"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#000"
+
+                android:textSize="13dp" />
+            <TextView android:id="@+id/shortened_link" android:text="https://youtu.be/fPTGEEXoUqs"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:gravity="center" android:layout_marginBottom="25dip"
+                android:textSize="13dp"
+                android:textColor="#000"
+                />
+            <TableLayout android:id="@+id/tableLayout1" android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:stretchColumns="*" android:gravity="center">
+                <TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button android:text="Copy"
+                        android:layout_width="fill_parent" android:id="@+id/copy"
+                        android:layout_height="wrap_content">
+                    </Button>
+                    <Button android:layout_height="wrap_content" android:text="Share"
+                        android:layout_width="match_parent" android:id="@+id/share">
+                    </Button>
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/error_display"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@android:drawable/stat_notify_error"
+            android:tint="#FF6464"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center" />
+        <TextView
+            android:textColor="#000"
+
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:text="Something went wrong.."
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#000"
+
+            android:id="@+id/error"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="#ffffff"
+        android:id="@+id/info_display"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/app_icon"/>
+        <TextView
+            android:text="Youtube Link Un-Shortener"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_margin="5dp"
+            android:id="@+id/welcome_text"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:textColor="#000"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+</FrameLayout>
+
+</LinearLayout>
